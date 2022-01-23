@@ -1,9 +1,10 @@
 #!/bin/bash
 yourfilenames=`ls ./Levels/*.*`
+res=""
 for eachfile in $yourfilenames
 do
-   var=${eachfile%_AdobeStock*}
-   var2=${var#*Levels/}
-   
-   echo var2
+   var=${eachfile#*Levels/}
+   res+="${var};"
 done
+
+echo "$res"
